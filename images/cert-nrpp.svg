@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="nrppGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#F0C040"/>
+    </linearGradient>
+    <linearGradient id="nrppBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A2D6B"/>
+      <stop offset="100%" style="stop-color:#1A4A9A"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="96" fill="url(#nrppBlue)" stroke="#C9A84C" stroke-width="3"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#nrppGold)" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <!-- Center fill -->
+  <circle cx="100" cy="100" r="78" fill="#0D3580"/>
+  <!-- Star burst top -->
+  <polygon points="100,18 103,28 114,28 105,34 108,44 100,38 92,44 95,34 86,28 97,28" fill="url(#nrppGold)"/>
+  <!-- Main text: NRPP -->
+  <text x="100" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="url(#nrppGold)" letter-spacing="2">NRPP</text>
+  <!-- Sub text -->
+  <text x="100" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" letter-spacing="1.5">CERTIFIED</text>
+  <!-- Divider line -->
+  <line x1="68" y1="120" x2="132" y2="120" stroke="url(#nrppGold)" stroke-width="0.8"/>
+  <!-- Bottom text line 1 -->
+  <text x="100" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" fill="#AABFE0" letter-spacing="0.5">NATIONAL RADON</text>
+  <!-- Bottom text line 2 -->
+  <text x="100" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" fill="#AABFE0" letter-spacing="0.5">PROFICIENCY PROGRAM</text>
+  <!-- Outer arc text -->
+  <path id="topArc" d="M 22,100 A 78,78 0 0,1 178,100" fill="none"/>
+  <!-- Side decorations -->
+  <circle cx="22" cy="100" r="3" fill="url(#nrppGold)" opacity="0.6"/>
+  <circle cx="178" cy="100" r="3" fill="url(#nrppGold)" opacity="0.6"/>
+  <!-- Measurement + Mitigation labels -->
+  <text x="100" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#C9A84C" letter-spacing="0.5">MEASUREMENT &amp; MITIGATION</text>
+</svg>

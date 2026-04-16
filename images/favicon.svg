@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <rect width="32" height="32" rx="7" fill="#8B1C1C"/>
+
+  <!-- House shape -->
+  <path d="M16 5 L27 14.5 L27 27 L19 27 L19 20 L13 20 L13 27 L5 27 L5 14.5 Z"
+        fill="white" opacity="0.95"/>
+
+  <!-- Roof ridge -->
+  <path d="M16 5 L27 14.5" stroke="#8B1C1C" stroke-width="0.8" stroke-linecap="round"/>
+  <path d="M16 5 L5 14.5"  stroke="#8B1C1C" stroke-width="0.8" stroke-linecap="round"/>
+
+  <!-- Shield overlay (center of house) -->
+  <path d="M16 12 C16 12 12 13.5 12 17 C12 19.5 14 21 16 22 C18 21 20 19.5 20 17 C20 13.5 16 12 16 12Z"
+        fill="#8B1C1C" opacity="0.85"/>
+
+  <!-- Checkmark inside shield -->
+  <path d="M14.2 17.2 L15.4 18.5 L17.8 16"
+        stroke="white" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
