@@ -519,3 +519,34 @@ p  { color: var(--text-muted); }
 /* ---- Scroll animation ---- */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
 .fade-in.visible { opacity: 1; transform: none; }
+
+/* ---- Mobile fixes ---- */
+@media (max-width: 600px) {
+  /* Trust bar — clean 2-column grid */
+  .trust-bar-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 12px;
+  }
+  .trust-item { justify-content: flex-start; }
+  .trust-item:last-child { grid-column: 1 / -1; justify-content: center; }
+
+  /* Hero buttons — full width stacked */
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Hero stats — tighter spacing */
+  .hero-stats { gap: 20px; }
+  .hero-stat strong { font-size: 20px; }
+
+  /* General font size reduction */
+  .hero h1 { font-size: 28px; }
+  .hero p  { font-size: 15px; }
+}
