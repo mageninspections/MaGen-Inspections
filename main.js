@@ -72,18 +72,51 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Contact Form Submit ----
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', e => {
+    contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = contactForm.querySelector('[type=submit]');
-      btn.textContent = 'Message Sent!';
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
       btn.disabled = true;
-      btn.style.background = '#16A34A';
-      contactForm.reset();
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
+
+      const data = {
+        'First Name':    contactForm.firstName.value,
+        'Last Name':     contactForm.lastName.value,
+        'Phone':         contactForm.phone.value,
+        'Email':         contactForm.email.value,
+        'Address':       contactForm.address.value,
+        'Service':       contactForm.service.value,
+        'Foundation':    contactForm.foundation.value,
+        'Message':       contactForm.message.value,
+      };
+
+      try {
+        const res = await fetch('https://formspree.io/f/xpqkqeky', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (res.ok) {
+          btn.textContent = '✓ Request Sent!';
+          btn.style.background = '#16A34A';
+          contactForm.reset();
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+          }, 5000);
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = 'Something went wrong — try again';
+        btn.style.background = '#DC2626';
         btn.disabled = false;
-        btn.style.background = '';
-      }, 4000);
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 4000);
+      }
     });
   }
 
