@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="ohioRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B1C1C"/>
+      <stop offset="100%" style="stop-color:#B52222"/>
+    </linearGradient>
+    <linearGradient id="ohioGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#EDD068"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="96" fill="url(#ohioRed)" stroke="#C9A84C" stroke-width="3"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#ohioGold)" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <!-- Center -->
+  <circle cx="100" cy="100" r="78" fill="#A01F1F"/>
+  <!-- Ohio pennant shape (simplified) -->
+  <path d="M60,72 L140,72 L140,90 Q140,100 130,105 L100,118 L70,105 Q60,100 60,90 Z" fill="#7A1515" stroke="url(#ohioGold)" stroke-width="1.5"/>
+  <!-- O H I O letters -->
+  <text x="100" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="900" fill="url(#ohioGold)" letter-spacing="6">OHIO</text>
+  <!-- State outline star -->
+  <polygon points="100,75 102,81 108,81 103,85 105,91 100,87 95,91 97,85 92,81 98,81" fill="url(#ohioGold)" opacity="0.9"/>
+  <!-- Licensed text box -->
+  <rect x="62" y="122" width="76" height="14" rx="7" fill="#7A1515" stroke="url(#ohioGold)" stroke-width="1"/>
+  <text x="100" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="url(#ohioGold)" letter-spacing="1">LICENSED</text>
+  <!-- Bottom labels -->
+  <text x="100" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" fill="#FFBBBB" letter-spacing="0.5">DEPT. OF HEALTH</text>
+  <text x="100" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" fill="#FFBBBB" letter-spacing="0.5">RADON CONTRACTOR</text>
+</svg>
